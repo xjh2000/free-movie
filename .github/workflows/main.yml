@@ -1,7 +1,9 @@
-on:  # push 代码时触发
- push:
-    tags:        
-      - v1.**
+name: Release
+
+on:
+  push:
+    tags:
+    - 'v*'
     
 jobs: 
     deploy: 
