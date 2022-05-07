@@ -1,5 +1,5 @@
 {
-  "envId": "{{env.ENV_ID}}",
+  "envId": "{{env.ENVID}}",
   "version": "2.0",
   "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
   "framework": {
@@ -8,11 +8,15 @@
       "client": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
+          "installCommand": "npm install --prefer-offline --no-audit --progress=false",
           "buildCommand": "npm run build",
           "outputPath": "dist",
-          "envVariables": {
-            "REACT_APP_ENV_ID": "{{env.ENV_ID}}"
-          }
+          "ignore": [
+            ".git",
+            ".github",
+            "node_modules",
+            "cloudbaserc.js"
+          ]
         }
       }
     }
