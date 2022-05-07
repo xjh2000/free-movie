@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Set the value
+        id: step_one
+        run: |
+          echo ${{secrets.ENV_ID}}
       - name: Tencent CloudBase Github Action
         uses: TencentCloudBase/cloudbase-action@v2
         with:
