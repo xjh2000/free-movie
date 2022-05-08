@@ -18,6 +18,8 @@ export default defineConfig({
     {rel: "manifest", href: "/manifest.json"},
   ],
   // @ts-ignore
+  history: {type: "hash"},
+  // @ts-ignore
   chainWebpack(memo: any) {
     memo.plugin('workbox').use(GenerateSW, [
       {
