@@ -83,11 +83,10 @@ export default function Page() {
           setQuery({ ...query, offset });
         }
       },
-    ).catch((error) => {
+    ).catch(() => {
       setHasMore(false);
       setResult([]);
       localStorage.setItem('searchResult', JSON.stringify([]));
-      console.log(error.message);
     });
     dataLoading = false;
   }
@@ -117,10 +116,10 @@ export default function Page() {
       <div className=" p-10
         gap-6 grid  sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4   justify-items-stretch"
       >
-        {result && result.map((item) => (
+        {result && result.map((item, index) => (
           <div
             className="  hover:brightness-50 "
-            key={item.title}
+            key={index}
           >
             <div className="flex h-full flex-row ">
               <img className="rounded-l-md object-cover w-1/2 h-full " src={item.post} alt="" />
