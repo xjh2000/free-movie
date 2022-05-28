@@ -4,7 +4,7 @@
   "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
   "region": "ap-guangzhou",
   "framework": {
-    "name": "movie-client",
+    "name": "movie",
     "plugins": {
       "client": {
         "use": "@cloudbase/framework-plugin-website",
