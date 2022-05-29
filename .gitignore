@@ -190,3 +190,5 @@ dist
 .pnp.*
 
 cloudbaserc.json
+
+.idea/
