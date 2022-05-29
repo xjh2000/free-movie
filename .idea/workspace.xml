@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdde0613-506a-498f-9f4d-637dadf87c34" name="Changes" comment="use vite">
+    <list default="true" id="cdde0613-506a-498f-9f4d-637dadf87c34" name="Changes" comment="change manifest name">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
       <workItem from="1653782043783" duration="2212000" />
       <workItem from="1653790577772" duration="2498000" />
       <workItem from="1653793105474" duration="4354000" />
-      <workItem from="1653797503155" duration="498000" />
+      <workItem from="1653797503155" duration="960000" />
     </task>
     <task id="LOCAL-00001" summary="重构 架构">
       <created>1653782261399</created>
@@ -89,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653797901897</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change manifest name">
+      <created>1653798039208</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653798039208</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +131,7 @@
     </ignored-roots>
     <MESSAGE value="重构 架构" />
     <MESSAGE value="use vite" />
-    <option name="LAST_COMMIT_MESSAGE" value="use vite" />
+    <MESSAGE value="change manifest name" />
+    <option name="LAST_COMMIT_MESSAGE" value="change manifest name" />
   </component>
 </project>
