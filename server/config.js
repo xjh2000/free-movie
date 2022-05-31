@@ -8,9 +8,9 @@ const config = {
   CONTROLLER_DIRECTORY: path.join(__dirname, 'controllers'),
   PROJECT_DIR: __dirname,
   tcbConfig: {
-    env: process.env.ENVID,
-    secretId: process.env.SECRETID,
-    secretKey: process.env.SECRETKEY,
+    env: process.env.ENV_ID,
+    secretId: process.env.SECRET_ID,
+    secretKey: process.env.SECRET_KEY,
   }
 };
 config.OPENAPI_YAML = path.join(config.ROOT_DIR, 'api', 'openapi.yaml');
