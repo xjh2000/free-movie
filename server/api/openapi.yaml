@@ -272,6 +272,30 @@ paths:
 components:
   schemas:
     NoticeIconList:
+      example:
+        total: 0
+        data:
+        - datetime: 2000-01-23
+          read: true
+          extra: extra
+          description: description
+          id: id
+          avatar: avatar
+          title: title
+          type: '{}'
+          key: key
+          status: status
+        - datetime: 2000-01-23
+          read: true
+          extra: extra
+          description: description
+          id: id
+          avatar: avatar
+          title: title
+          type: '{}'
+          key: key
+          status: status
+        success: true
       properties:
         data:
           items:
@@ -296,6 +320,7 @@ components:
       - notification
       - message
       - event
+      example: '{}'
       properties: {}
       title: NoticeIconItemType
       type: string
@@ -321,6 +346,10 @@ components:
       x-apifox-ignore-properties: []
       x-apifox-folder: Schemas
     LoginResult:
+      example:
+        type: type
+        status: status
+        currentAuthority: currentAuthority
       properties:
         status:
           type: string
@@ -336,6 +365,11 @@ components:
       x-apifox-ignore-properties: []
       x-apifox-folder: Schemas
     LoginParams:
+      example:
+        password: password
+        type: type
+        autoLogin: true
+        username: username
       properties:
         username:
           type: string
@@ -354,6 +388,34 @@ components:
       x-apifox-ignore-properties: []
       x-apifox-folder: Schemas
     RuleList:
+      example:
+        total: 5
+        data:
+        - owner: owner
+          createdAt: createdAt
+          callNo: 6
+          name: name
+          progress: 5
+          disabled: true
+          href: href
+          avatar: avatar
+          key: 0
+          desc: desc
+          status: 1
+          updatedAt: updatedAt
+        - owner: owner
+          createdAt: createdAt
+          callNo: 6
+          name: name
+          progress: 5
+          disabled: true
+          href: href
+          avatar: avatar
+          key: 0
+          desc: desc
+          status: 1
+          updatedAt: updatedAt
+        success: true
       properties:
         data:
           items:
@@ -385,6 +447,19 @@ components:
       x-apifox-ignore-properties: []
       x-apifox-folder: Schemas
     RuleListItem:
+      example:
+        owner: owner
+        createdAt: createdAt
+        callNo: 6
+        name: name
+        progress: 5
+        disabled: true
+        href: href
+        avatar: avatar
+        key: 0
+        desc: desc
+        status: 1
+        updatedAt: updatedAt
       properties:
         key:
           format: int32
@@ -433,6 +508,9 @@ components:
       x-apifox-ignore-properties: []
       x-apifox-folder: Schemas
     FakeCaptcha:
+      example:
+        code: 0
+        status: status
       properties:
         code:
           format: int32
@@ -446,6 +524,17 @@ components:
       x-apifox-ignore-properties: []
       x-apifox-folder: Schemas
     NoticeIconItem:
+      example:
+        datetime: 2000-01-23
+        read: true
+        extra: extra
+        description: description
+        id: id
+        avatar: avatar
+        title: title
+        type: '{}'
+        key: key
+        status: status
       properties:
         id:
           type: string
@@ -484,6 +573,32 @@ components:
       x-apifox-ignore-properties: []
       x-apifox-folder: Schemas
     CurrentUser:
+      example:
+        country: country
+        access: access
+        address: address
+        signature: signature
+        unreadCount: 6
+        avatar: avatar
+        title: title
+        userid: userid
+        tags:
+        - label: label
+          key: key
+        - label: label
+          key: key
+        notifyCount: 0
+        geographic:
+          province:
+            label: label
+            key: key
+          city:
+            label: label
+            key: key
+        phone: phone
+        name: name
+        email: email
+        group: group
       properties:
         name:
           type: string
@@ -539,18 +654,31 @@ components:
       x-apifox-ignore-properties: []
       x-apifox-folder: Schemas
     CurrentUser_tags:
+      example:
+        label: label
+        key: key
       properties:
         key:
           type: string
         label:
           type: string
     CurrentUser_geographic_province:
+      example:
+        label: label
+        key: key
       properties:
         label:
           type: string
         key:
           type: string
     CurrentUser_geographic:
+      example:
+        province:
+          label: label
+          key: key
+        city:
+          label: label
+          key: key
       properties:
         province:
           $ref: '#/components/schemas/CurrentUser_geographic_province'
