@@ -25,13 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: change work path
-        run: echo "$PATH/server" >> $GITHUB_PATH && echo ${{secrets.ENV_ID}}
-
       # Runs a set of commands using the runners shell
       - name: Deploy to Tencent CloudBase
-        uses: TencentCloudBase/cloudbase-action@v2.0.1
+        uses: TencentCloudBase/cloudbase-action/server@v2.0.1
         with:
           secretId: ${{secrets.SECRET_ID}}
           secretKey: ${{secrets.SECRET_KEY}}
