@@ -1,6 +1,7 @@
 // @ts-ignore
 /* eslint-disable */
-import { request } from 'umi';
+import {request} from 'umi';
+import {LoginApi} from "@/utils/openApi";
 
 /** 获取当前的用户 GET /api/currentUser */
 export async function currentUser(options?: { [key: string]: any }) {
@@ -22,13 +23,14 @@ export async function outLogin(options?: { [key: string]: any }) {
 
 /** 登录接口 POST /api/login/account */
 export async function login(body: API.LoginParams, options?: { [key: string]: any }) {
-  return request<API.LoginResult>('/api/login/account', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    data: body,
-    ...(options || {}),
+  let loginApi = new LoginApi();
+  await loginApi.login(body).then(res => {
+    console.log('login res', res);
+
+    return res;
+  }).catch(err => {
+    console.log('login err', err);
+    return err;
   });
 }
 

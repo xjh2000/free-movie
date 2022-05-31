@@ -7,6 +7,11 @@ const config = {
   BASE_VERSION: 'v2',
   CONTROLLER_DIRECTORY: path.join(__dirname, 'controllers'),
   PROJECT_DIR: __dirname,
+  tcbConfig: {
+    env: process.env.ENVID,
+    secretId: process.env.SECRETID,
+    secretKey: process.env.SECRETKEY,
+  }
 };
 config.OPENAPI_YAML = path.join(config.ROOT_DIR, 'api', 'openapi.yaml');
 config.FULL_PATH = `${config.URL_PATH}:${config.URL_PORT}/${config.BASE_VERSION}`;
