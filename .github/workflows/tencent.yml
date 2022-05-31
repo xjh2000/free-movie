@@ -19,13 +19,20 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    environment: tencent
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo $ENV_ID
+      - name: Tencent CloudBase Github Action
+        uses: TencentCloudBase/cloudbase-action@v2
+        env:
+           ENV_ID: ${{secrets.SECRET_ID}}
+           SECRET_ID: ${{secrets.SECRET_ID}}
+           SECRET_KEY: ${{secrets.SECRET_KEY}}
+        with:
+          secretId: ${{secrets.SECRET_ID}}
+          secretKey: ${{secrets.SECRET_KEY}}
+          envId: ${{secrets.ENV_ID}}
 
