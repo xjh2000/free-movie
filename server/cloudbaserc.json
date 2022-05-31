@@ -1,0 +1,20 @@
+{
+  "envId": "{{env.ENV_ID}}",
+  "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+  "version": "2.0",
+  "framework": {
+    "name": "movie",
+    "plugins": {
+      "server": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "mode": "low-cost",
+          "serviceName": "free-movie-service",
+          "servicePath": "/free-movie-service",
+          "containerPort": "3000"
+        }
+      }
+    }
+  },
+  "region": "ap-shanghai"
+}
