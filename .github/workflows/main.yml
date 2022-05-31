@@ -28,7 +28,8 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: change work path
-        run: cd ./server
+        run: cd ./server && ls -l
+       
 
       # Runs a set of commands using the runners shell
       - name: Deploy to Tencent CloudBase
