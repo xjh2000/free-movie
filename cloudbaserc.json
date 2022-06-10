@@ -5,21 +5,6 @@
   "framework": {
     "name": "movie",
     "plugins": {
-      "server": {
-        "use": "@cloudbase/framework-plugin-container",
-        "inputs": {
-          "mode": "low-cost",
-          "serviceName": "free-movie-service",
-          "servicePath": "/free-movie-service",
-          "localPath": "./server",
-          "containerPort": "3000",
-          "envVariables": {
-            "ENV_ID": "{{env.ENV_ID}}",
-            "SECRET_ID": "{{env.SECRET_ID}}",
-            "SECRET_KEY": "{{env.SECRET_KEY}}"
-          }
-        }
-      },
       "web": {
         "use": "@cloudbase/framework-plugin-website",
         "inputs": {
