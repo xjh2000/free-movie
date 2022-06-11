@@ -1,11 +1,13 @@
 <script setup lang="ts">
 
-import router from "../routers/router";
 import {UserStore} from "../store/UserStore";
+import {Ref, ref} from "vue";
+import {ConfigProviderProps} from 'vant';
 
-function clickHandler() {
-  router.push("/admin");
-}
+const themeVars: Ref<ConfigProviderProps["themeVars"]> = ref({
+  TabbarBackgroundColor: '#2c022f',
+  TabbarItemActiveBackgroundColor: "#2c022f",
+});
 
 let userStore = UserStore();
 
@@ -17,14 +19,17 @@ function storeHandler() {
 </script>
 
 <template>
-  <div>
-    <button @click="clickHandler">goto admin</button>
-    <button @click="storeHandler">test Store local</button>
-    <p>this is user page</p>
-  </div>
+  <van-config-provider :theme-vars="themeVars">
+    <router-view/>
+    <van-tabbar route>
+      <van-tabbar-item to="/home" icon="home-o">
+        首页
+      </van-tabbar-item>
+      <van-tabbar-item to="/player" icon="play-circle-o">
+        播放器
+      </van-tabbar-item>
+    </van-tabbar>
+  </van-config-provider>
 </template>
 
 
-<style scoped>
-
-</style>

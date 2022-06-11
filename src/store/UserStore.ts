@@ -4,8 +4,9 @@ type UserStoreState = {
     auth: string[];
 }
 
-let localUser: UserStoreState = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user') as string) : {};
+let localUser: UserStoreState = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user') as string) : {auth: []};
 
+console.log(localUser);
 
 export const UserStore = defineStore(
     'user',

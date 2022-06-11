@@ -12,8 +12,10 @@ useRegisterSW();
 
 
 let app = createApp(App);
+// 功能注册
 app.use(router);
 app.use(createPinia());
+
 app.mount('#app');
 
 
