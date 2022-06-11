@@ -6,6 +6,7 @@ import App from './App.vue'
 import {useRegisterSW} from "virtual:pwa-register/vue";
 import router from "./routers/router";
 import {createPinia} from "pinia";
+import {localStorageOfUserStore} from "./store/UserStore";
 
 useRegisterSW();
 
@@ -14,3 +15,6 @@ let app = createApp(App);
 app.use(router);
 app.use(createPinia());
 app.mount('#app');
+
+
+localStorageOfUserStore();
