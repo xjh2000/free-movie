@@ -37,6 +37,9 @@ export const PlayerStore = defineStore(
             resolveName(state: PlayerStoreState) {
                 return state.resolveOrigins.map(item => item.name);
             },
+            history(state: PlayerStoreState) {
+                return [...state.historyUrls];
+            },
             currentResolveOrigin(state: PlayerStoreState) {
                 return state.resolveOrigins.find(item => item.name === state.currentOrigin);
             }

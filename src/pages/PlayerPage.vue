@@ -40,7 +40,7 @@ watchEffect(() => {
     </div>
     <van-popup v-model:show="showHistoryUrlPicker" round position="bottom">
       <van-picker
-          :columns="playerStore.historyUrls"
+          :columns="playerStore.history"
           @cancel="showHistoryUrlPicker = false"
           @confirm="HistoryUrlPicker"
       />
