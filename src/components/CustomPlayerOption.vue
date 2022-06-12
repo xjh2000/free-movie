@@ -55,8 +55,8 @@ const resolveOriginChange = (value: string) => {
         </van-button>
         <van-popup v-model:show="showResolveOriginModify" round position="bottom" :style="{ height: '50%' }"
         >
-          <VanButton class="w-full" @click="playerStore.resolveOrigin.unshift({name:'',url:''})">添加</VanButton>
-          <div class="p-3" v-for="item in playerStore.resolveOrigin">
+          <VanButton class="w-full" @click="playerStore.resolveOrigins.unshift({name:'',url:''})">添加</VanButton>
+          <div class="p-3" v-for="item in playerStore.resolveOrigins">
             <div class="p-3 bg-black">
               <van-field
                   v-model="item.name"
@@ -69,7 +69,7 @@ const resolveOriginChange = (value: string) => {
                   placeholder="解析路线地址"
               />
               <VanButton class="w-full"
-                         @click="playerStore.resolveOrigin.splice(playerStore.resolveOrigin.indexOf(item),1)">删除
+                         @click="playerStore.resolveOrigins.splice(playerStore.resolveOrigins.indexOf(item),1)">删除
               </VanButton>
             </div>
 
@@ -80,9 +80,8 @@ const resolveOriginChange = (value: string) => {
     </div>
 
     <van-field v-model="playerStore.videoUrl" label="视频地址" placeholder="输入要解析的视频地址"/>
-    <van-button class="w-full" type="primary" @click="playerStore.resolveUrl = playerStore.resolveOrigin.find((origin) =>{
-      return origin.name === playerStore.currentOrigin;
-    }).url + playerStore.videoUrl">解析</van-button>
+    <van-button class="w-full" type="primary" @click="playerStore.setCurrentResolveUrl( playerStore.videoUrl)">解析
+    </van-button>
   </div>
 
 </template>
