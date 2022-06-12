@@ -7,7 +7,9 @@ export const userRouter: RouteRecordRaw[] = [
         redirect: '/home',
         children: [
             {path: 'home', component: () => import('../pages/HomePage.vue')},
-            {path: 'player', component: () => import('../pages/PlayerPage.vue')},
+            {
+                path: 'player', component: () => import('../pages/PlayerPage.vue')
+            },
         ]
     },
 ]

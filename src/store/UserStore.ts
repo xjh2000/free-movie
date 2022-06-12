@@ -6,8 +6,6 @@ type UserStoreState = {
 
 let localUser: UserStoreState = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user') as string) : {auth: []};
 
-console.log(localUser);
-
 export const UserStore = defineStore(
     'user',
     {
@@ -21,10 +19,3 @@ export const UserStore = defineStore(
         }
     }
 );
-
-export function localStorageOfUserStore() {
-    let userStore = UserStore();
-    userStore.$subscribe((mutation, state) => {
-        localStorage.setItem('user', JSON.stringify(state));
-    })
-}
