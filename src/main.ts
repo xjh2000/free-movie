@@ -6,7 +6,7 @@ import App from './App.vue'
 import {useRegisterSW} from "virtual:pwa-register/vue";
 import router from "./routers/router";
 import {createPinia} from "pinia";
-import './index.css';
+import './tailwind.css';
 
 useRegisterSW();
 

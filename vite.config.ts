@@ -2,10 +2,10 @@ import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import {VitePWA} from "vite-plugin-pwa";
 import mockServer from 'vite-plugin-mock-server';
-import Components from 'unplugin-vue-components/vite';
+
 // @ts-ignore
 import manifestJson from './public/manifest.json'
-
+import Components from 'unplugin-vue-components/vite';
 import {VantResolver} from 'unplugin-vue-components/resolvers';
 
 const localEnabled = process.env.USE_MOCK || false;

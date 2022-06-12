@@ -21,14 +21,16 @@ function storeHandler() {
 <template>
   <van-config-provider :theme-vars="themeVars">
     <router-view/>
-    <van-tabbar route>
-      <van-tabbar-item to="/home" icon="home-o">
-        首页
-      </van-tabbar-item>
-      <van-tabbar-item to="/player" icon="play-circle-o">
-        播放器
-      </van-tabbar-item>
-    </van-tabbar>
+    <div class="fixed left-0 right-0 bottom-0">
+      <van-tabbar route>
+        <van-tabbar-item to="/home" icon="home-o">
+          首页
+        </van-tabbar-item>
+        <van-tabbar-item to="/player" icon="play-circle-o">
+          播放器
+        </van-tabbar-item>
+      </van-tabbar>
+    </div>
   </van-config-provider>
 </template>
 

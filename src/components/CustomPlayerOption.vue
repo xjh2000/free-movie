@@ -49,7 +49,6 @@ const resolveOriginChange = (value: string) => {
         <van-button
             class="w-full"
             type="primary"
-            size="small"
             @click="showResolveOriginModify = true"
         >
           自定义路线
@@ -60,13 +59,11 @@ const resolveOriginChange = (value: string) => {
           <div class="p-3" v-for="item in playerStore.resolveOrigin">
             <div class="p-3 bg-black">
               <van-field
-                  size="small"
                   v-model="item.name"
                   label="名称"
                   placeholder="解析路线名称"
               />
               <van-field
-                  size="small"
                   v-model="item.url"
                   label="地址"
                   placeholder="解析路线地址"
