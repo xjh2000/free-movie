@@ -3,6 +3,7 @@
 import {ref, watchEffect} from "vue";
 import CustomPlayerOption from "../components/CustomPlayerOption.vue";
 import {PlayerStore} from "../store/PlayerStore";
+import PlayerOption from "../components/PlayerOption.vue";
 
 const playerStore = PlayerStore();
 const isPlaying = ref(false);
@@ -29,7 +30,7 @@ watchEffect(() => {
 
     <van-tabs v-model:active="playerStore.activeTab">
       <van-tab title="默认" name="default">
-        <p>暂未实现</p>
+        <PlayerOption/>
       </van-tab>
       <van-tab title="自定义" name="custom">
         <CustomPlayerOption/>

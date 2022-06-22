@@ -18,7 +18,7 @@ import {Configuration} from "./configuration";
 import globalAxios, {AxiosInstance, AxiosPromise} from 'axios';
 import * as process from "process";
 
-export const BASE_PATH = process.env.NODE_ENV === "development" ? "http://localhost:8080" : "https://api.xjh2000.top";
+export const BASE_PATH = process.env.NODE_ENV === 'production' ? 'https://api.xjh2000.top' : 'http://localhost:8000';
 
 /**
  *

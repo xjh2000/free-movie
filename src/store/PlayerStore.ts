@@ -1,4 +1,5 @@
 import {defineStore} from "pinia";
+import {VideoListItem} from "../api";
 
 type PlayerStoreState = {
     activeTab: string;
@@ -11,6 +12,8 @@ type PlayerStoreState = {
     currentOrigin: string;
     videoUrl: string;
     historyUrls: string[];
+    videoUrlList: VideoListItem[];
+    currentEpisode: string;
 }
 
 const defaultState: PlayerStoreState = {
@@ -19,7 +22,9 @@ const defaultState: PlayerStoreState = {
     currentResolveUrl: '',
     resolveOrigins: [],
     currentOrigin: '',
-    videoUrl: ''
+    videoUrl: '',
+    videoUrlList: [],
+    currentEpisode: ''
 }
 const historyUrlSize = 30;
 const StoreId = 'player';
